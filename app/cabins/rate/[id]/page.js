@@ -22,7 +22,7 @@ const Page = async ({ params }) => {
   );
 
   const isUserRated = filteredRatings.some(
-    (rating) => rating.guest_id === user.id
+    (rating) => rating.guest_id === user?.id
   );
 
   console.log(filteredRatings);
