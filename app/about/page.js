@@ -56,6 +56,7 @@ const Page = async () => {
           src="/about-2.jpg"
           fill
           alt="Family that manages The Wild Oasis"
+          placeholder="blur"
         />
       </div>
 

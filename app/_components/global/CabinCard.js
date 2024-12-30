@@ -14,6 +14,7 @@ function CabinCard({ cabin }) {
           alt={`Cabin ${name}`}
           fill
           className="object-cover border-r border-gray-200"
+          placeholder="blur"
         />
       </div>
 
