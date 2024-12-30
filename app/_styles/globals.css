@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .spinner {
+    margin: 0 auto 0;
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid #000000;
+    border-right-color: #383839;
+    animation: rotate 1s infinite linear;
+  }
+
+  .spinner-mini {
+    margin: 0;
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid #383839;
+    border-right-color: transparent;
+    animation: rotate 1s infinite linear;
+  }
+
+  @keyframes rotate {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+}
+
+/* For date picker */
+.rdp {
+  --rdp-cell-size: 32px !important;
+  --rdp-accent-color: black !important;
+  --rdp-background-color: black !important;
+  margin: 0 !important;
+}
+
+.rdp-range_start .rdp-day_button,
+.rdp-range_end .rdp-day_button {
+  background-color: black !important;
+  border: none !important;
+}
+
+.rdp-selected .rdp-day_button {
+  border: 2px solid black !important;
+}
+
+.rdp-range_middle .rdp-day_button {
+  border: transparent !important;
+}
+
+.rdp-chevron {
+  display: inline-block;
+  fill: black !important;
+}
