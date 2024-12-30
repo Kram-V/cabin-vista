@@ -23,6 +23,10 @@ export async function createReservation(bookingData, formData) {
   const num_guests = formData.get("num_guests");
   const observations = formData.get("observations");
 
+  // console.log("BOOKING DATA: ", bookingData.start_date);
+
+  // return;
+
   const inputData = {
     guest_id,
     num_guests,

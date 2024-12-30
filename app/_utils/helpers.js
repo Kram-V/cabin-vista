@@ -13,6 +13,12 @@ export const formatDate = (date) => {
   return dateFormatted;
 };
 
+export const convertToIsoStringLocalTime = (date) => {
+  return new Date(
+    date.getTime() - date.getTimezoneOffset() * 60000
+  ).toISOString();
+};
+
 export const getFirstTwoCapitalLetterFromWords = (str) => {
   const arrWords = str.split(" ");
 

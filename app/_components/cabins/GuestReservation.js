@@ -10,8 +10,6 @@ const GuestReservation = ({ settings, bookedDates, cabin, userName }) => {
     to: undefined,
   });
 
-  // console.log("NUMBER OF GUESTS: ", range);
-
   return (
     <div className="grid grid-cols-2 gap-10">
       <DateSelector
