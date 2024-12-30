@@ -47,7 +47,6 @@ const Page = async () => {
         <Image
           src={about1}
           alt="Family sitting around a fire pit in front of cabin"
-          placeholder="blur"
         />
       </div>
 
@@ -56,7 +55,6 @@ const Page = async () => {
           src="/about-2.jpg"
           fill
           alt="Family that manages The Wild Oasis"
-          placeholder="blur"
         />
       </div>
 

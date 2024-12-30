@@ -1,7 +1,6 @@
 // "use client";
 
 import { auth } from "@/app/_lib/auth";
-import Image from "next/image";
 import Link from "next/link";
 // import { usePathname } from "next/navigation";
 import React from "react";
@@ -54,7 +53,7 @@ const Navigation = async () => {
       <li>
         <Link href="/account" className="flex items-center gap-2">
           {user ? (
-            <Image
+            <img
               className=" rounded-full w-8"
               src={user.image}
               alt={user.name}

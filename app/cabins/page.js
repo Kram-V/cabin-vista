@@ -28,7 +28,7 @@ const Page = async ({ searchParams }) => {
 
       <Filter />
 
-      <Suspense fallback={<Spinner />}>
+      <Suspense fallback={<Spinner className="mt-24" />} key={filter}>
         <CabinList filter={filter} />
       </Suspense>
     </div>
