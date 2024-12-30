@@ -6,6 +6,7 @@ import Card from "../global/Card";
 import StarRating from "./StarRating";
 import { useState } from "react";
 import { createRating } from "@/app/_lib/actions";
+import { useFormStatus } from "react-dom";
 
 function RateForm({ cabin, user, isUserRated }) {
   const [rating, setRating] = useState("");
@@ -56,9 +57,7 @@ function RateForm({ cabin, user, isUserRated }) {
               </div>
 
               <div className="flex justify-end items-center gap-6">
-                <Button bgColor="bg-black" color="white">
-                  Submit
-                </Button>
+                <RateButton />
               </div>
             </form>
           </>
@@ -93,6 +92,21 @@ function RateForm({ cabin, user, isUserRated }) {
         </div>
       )}
     </>
+  );
+}
+
+function RateButton() {
+  const { pending } = useFormStatus();
+
+  return (
+    <Button
+      disabled={pending}
+      bgColor="bg-black"
+      color="white"
+      className="disabled:cursor-not-allowed"
+    >
+      {pending ? "Rating..." : "Rate Cabin"}
+    </Button>
   );
 }
 
