@@ -76,10 +76,10 @@ export async function updateProfile(formData) {
   const national_id = formData.get("national_id");
   const nationality = formData.get("nationality");
 
-  if (national_id) {
-    if (!/^\d{6,12}$/.test(national_id))
-      throw new Error("Please put a valid national id number");
-  }
+  // if (national_id) {
+  //   if (!/^\d{6,12}$/.test(national_id))
+  //     throw new Error("Please put a valid national id number");
+  // }
 
   const updateData = {
     national_id,

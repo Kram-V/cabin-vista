@@ -53,6 +53,7 @@ const Navigation = async () => {
       <li>
         <Link href="/account" className="flex items-center gap-2">
           {user ? (
+            // eslint-disable-next-line @next/next/no-img-element
             <img
               className=" rounded-full w-8"
               src={user.image}

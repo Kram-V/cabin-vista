@@ -5,10 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { formatCurrency } from "@/app/_utils/helpers";
 
-export const formatDistanceFromNow = (dateStr) =>
-  formatDistance(parseISO(dateStr), new Date(), {
+export const formatDistanceFromNow = (startDate) => {
+  const start = parseISO(startDate);
+
+  return formatDistance(start, new Date(), {
     addSuffix: true,
   }).replace("about ", "");
+};
 
 function ReservationCard({ booking }) {
   const {

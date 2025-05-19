@@ -30,8 +30,6 @@ const bgColors = [
 const Testimonials = async () => {
   const testimonials = await getFirstThreeTestimonials();
 
-  console.log("TESTIMONIALS: ", testimonials);
-
   return (
     <div>
       <div className="w-[1400px] mx-auto text-black gap-10 py-16">

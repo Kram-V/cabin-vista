@@ -6,7 +6,7 @@ import { useFormStatus } from "react-dom";
 import Button from "../global/Button";
 
 const UpdateProfileForm = ({ userDetails, selectCountry }) => {
-  const { fullname, national_id, email } = userDetails;
+  const { fullname, national_id, nationality, email } = userDetails;
 
   return (
     <form
@@ -15,10 +15,16 @@ const UpdateProfileForm = ({ userDetails, selectCountry }) => {
     >
       <div className="space-y-2">
         <div className="flex items-center justify-between">
-          <label htmlFor="nationality">Where are you from?</label>
+          <label htmlFor="nationalID">Nationality</label>
         </div>
 
-        {selectCountry}
+        {/* {selectCountry} */}
+
+        <input
+          defaultValue={nationality}
+          name="nationality"
+          className="px-5 py-3 w-full shadow-sm rounded-sm border border-gray-500 focus:outline-none focus:border-blue-500 focus:border-2"
+        />
       </div>
 
       <div className="space-y-2">
