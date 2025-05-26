@@ -7,12 +7,24 @@ import Image from "next/image";
 import Link from "next/link";
 import { formatCurrency } from "@/app/_utils/helpers";
 
-export const formatDistanceFromNow = (startDate) => {
-  const start = parseISO(startDate);
+const formatDistanceFromNow = (startDate) => {
+  const localDateOnly = new Date(startDate.split("T")[0]);
 
-  return formatDistance(start, new Date(), {
-    addSuffix: true,
-  }).replace("about ", "");
+  if (isPast(localDateOnly)) {
+    return formatDistance(localDateOnly, new Date(), {
+      addSuffix: true,
+    })
+      .replace("about ", "")
+      .replace("in", "In");
+  } else {
+    const fullDate = parseISO(startDate);
+
+    return formatDistance(fullDate, new Date(), {
+      addSuffix: true,
+    })
+      .replace("about ", "")
+      .replace("in", "In");
+  }
 };
 
 function ReservationCard({ booking }) {
